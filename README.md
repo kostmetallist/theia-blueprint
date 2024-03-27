@@ -92,7 +92,7 @@ yarn electron package
 
 The packaged application is located in `applications/electron/dist`.
 
-### Create a Preview Electron Electron Application (without packaging it)
+### Create a Preview Electron Application (without packaging it)
 
 ```sh
 yarn electron package:preview
@@ -134,13 +134,13 @@ The Eclipse Theia IDE only packages existing functionality into a product and in
 You can create a Docker Image for the Eclipse Theia IDE based on the browser app with the following build command:
 
 ```sh
-docker build -t theia-ide -f browser.Dockerfile .
+docker build -t theia-blueprint -f browser.Dockerfile .
 ```
 
 You may then run this with
 
 ```sh
-docker run -p=3000:3000 --rm theia-ide
+docker run -it -p "3000:3000" --name "theia-blueprint" theia-blueprint
 ```
 
-and connect to <http://localhost:3000/>
+From within the container, start the browser application and connect to <http://localhost:3000/>

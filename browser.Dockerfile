@@ -63,10 +63,6 @@ ENV USE_LOCAL_GIT true
 
 # Swtich to Theia user
 USER theia
-WORKDIR /home/theia/applications/browser
 
 # Launch the backend application via node
-ENTRYPOINT [ "node", "/home/theia/applications/browser/lib/backend/main.js" ]
-
-# Arguments passed to the application
-CMD [ "/home/project", "--hostname=0.0.0.0" ]
+ENTRYPOINT [ "bash" ]
